@@ -3,11 +3,12 @@ import { v4 as uuidv4 } from "uuid";
 import "./App.css";
 
 const App = () => {
+  
   const [notes, setNotes] = useState(()=>{
     const savedNotes = localStorage.getItem("notes");
-
     return savedNotes? JSON.parse(savedNotes) : [] ;
   });
+
   const [search, setSearch] = useState("");
 
   
